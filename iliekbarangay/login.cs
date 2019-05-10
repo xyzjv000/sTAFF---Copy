@@ -76,6 +76,9 @@ namespace iliekbarangay
 
         private void staffLgn_Click(object sender, EventArgs e)
         {    
+                
+            try
+            {
                 StaffMain staff = new StaffMain();
                 string pass;
                 pass = Eramake.eCryptography.Encrypt(stffPass.Text);
@@ -127,6 +130,11 @@ namespace iliekbarangay
                         return;
                     }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Server settings");
+            }
             
 
             
